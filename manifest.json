@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "WhatsApp Chat Copy Button",
+    "version": "1.0",
+    "description": "Adds a floating copy button on Web WhatsApp messages to copy text.",
+    "permissions": [
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://web.whatsapp.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ]
+}
